@@ -82,6 +82,20 @@ I will come to your desk and start yelling at you. I swear!
 This should also help to minimize the possiblity of merge conflicts and also
 help to ease-in code-reviews.
 
+### Passing *90% Code Coverage* check
+
+This one is simple. Just write tests. Write enough tests, so you have at least
+90% covered. If you cheat on the system and write tests, that do nothing just
+to pass this test and I happen to be the peer who is reviewing your code,
+I will come to your desk and start yelling at you (again).
+
+Be a good citizen. Respect the coding guidelines and write good and sane tests.
+
+This will make everyones life easier. It'll help to minimize bugs introduced by
+new features. It'll help to discover breaking changes real quick and it even
+shows you code-smell at first glance. If you can't test the code, the code is
+bad. Simple as that. Refactor so you can test your code.
+
 ## Example Unit-Tests
 
 ### Example Goblin Unit-Test
