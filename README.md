@@ -48,7 +48,7 @@ To pass the *linting* rules, your code has to pass the following checks:
 - [golint][golint]
 - have at least 90% code coverage
 
-### `gofmt`
+### Passing `gofmt` check
 
 You have to pass the `gofmt` default rules, so we all have a consistent
 code-style. This helps to minimize the possiblity of merge conflicts and helps
