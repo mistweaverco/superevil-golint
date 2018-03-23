@@ -1,0 +1,12 @@
+#!/bin/bash
+
+go() {
+  case $1 in
+    lint)
+      shift
+      superevil-golint
+      ;;
+    *)
+      command go "$@";;
+  esac
+}
