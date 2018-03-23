@@ -48,6 +48,16 @@ To pass the *linting* rules, your code has to pass the following checks:
 - [golint][golint]
 - have at least 90% code coverage
 
+### `gofmt`
+
+You have to pass the `gofmt` default rules, so we all have a consistent
+code-style. This helps to minimize the possiblity of merge conflicts and helps
+to ease in code-reviews.
+
+You should really consider running `gofmt` each time you save your files.
+There are excellent plugins that helps to ease the pain,
+like the wonderful [vim-go][vim-go-github] plugin for *Vim* and *NeoVim*.
+
 ## Example Unit-Tests
 
 ### Example Goblin Unit-Test
@@ -98,4 +108,5 @@ These dependencies are automatically resolved when you install the
 [goblin]: https://github.com/franela/goblin
 [golint]: https://godoc.org/golang.org/x/lint/golint
 [golang]: https://golang.org/
+[vim-go-github]: https://github.com/fatih/vim-go
 
