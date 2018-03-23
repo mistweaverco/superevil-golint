@@ -44,9 +44,9 @@ go lint
 
 To pass the *linting* rules, your code has to pass the following checks:
 
-- [gofmt][gofmt]
-- [golint][golint]
-- have at least 90% code coverage
+- [gofmt](#passing-gofmt-check)
+- [golint](#passing-golint-check)
+- [have at least 90% code coverage](#passing-90-code-coverage-check)
 
 ### Passing `gofmt` check
 
