@@ -58,6 +58,30 @@ You should really consider running `gofmt` each time you save your files.
 There are excellent plugins that helps to ease the pain,
 like the wonderful [vim-go][vim-go-github] plugin for *Vim* and *NeoVim*.
 
+### Passing `golint` check
+
+You don't have to do anything specific to pass the `golint` testing stage,
+because I can't enforce them; even the official repo states:
+
+> The suggestions made by golint are exactly that: suggestions.
+> Golint is not perfect, and has both false positives and false negatives.
+> Do not treat its output as a gold standard.
+> We will not be adding pragmas or other knobs to suppress specific warnings,
+> so do not expect or require code to be completely "lint-free".
+> In short, this tool is not, and will never be,
+> trustworthy enough for its suggestions to be enforced automatically,
+> for example as part of a build process.
+>
+> Golint makes suggestions for many of the mechanically checkable
+> items listed in Effective Go and the CodeReviewComments wiki page.
+
+Following to the best extend is in the hands of the developers,
+but if we happen to work on a project and you're simply ignoring all this,
+I will come to your desk and start yelling at you. I swear!
+
+This should also help to minimize the possiblity of merge conflicts and also
+help to ease-in code-reviews.
+
 ## Example Unit-Tests
 
 ### Example Goblin Unit-Test
