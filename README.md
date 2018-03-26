@@ -27,8 +27,8 @@ go get github.com/superevilmegaco/superevil-golint
 
 ### Custom mirrors
 
-You can always mirror one of the locations found above and use your own
-location then.
+You can always mirror one of the locations found above and then use your own
+location.
 
 Just fork this repository and you're good to go.
 
