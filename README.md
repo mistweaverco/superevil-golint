@@ -89,7 +89,7 @@ which [implements this][vim-go-github-go-vet] in
 ### Passing `golint` check
 
 You don't have to do anything specific to pass the `golint` testing stage,
-because I can't enforce them; even the official repo states:
+because I can't enforce them; [even the official repo states][golint-purpose]:
 
 > The suggestions made by golint are exactly that: suggestions.
 > Golint is not perfect, and has both false positives and false negatives.
@@ -175,6 +175,7 @@ These dependencies are automatically resolved when you install the
 [gomega]: https://github.com/onsi/gomega
 [goblin]: https://github.com/franela/goblin
 [golint]: https://godoc.org/golang.org/x/lint/golint
+[golint-purpose]: https://github.com/golang/lint/blob/ead987a65e5c7e053cf9633f9eac1f734f6b4fe3/README.md#purpose
 [golang]: https://golang.org/
 [vim-go-github]: https://github.com/fatih/vim-go
 [vim-go-github-go-vet]: https://github.com/fatih/vim-go/blob/b237f52ef7229fd3181330c4197aa1b97270b669/doc/vim-go.txt#L53
