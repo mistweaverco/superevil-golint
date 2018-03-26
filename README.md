@@ -53,6 +53,7 @@ go lint ./src/...
 To pass the *linting* rules, your code has to pass the following checks:
 
 - [gofmt](#passing-gofmt-check)
+- [go vet](#passing-go-vet-check)
 - [golint](#passing-golint-check)
 - [have at least 90% code coverage](#passing-90-code-coverage-check)
 
@@ -65,6 +66,25 @@ to ease in code-reviews.
 You should really consider running `gofmt` each time you save your files.
 There are excellent plugins that helps to ease the pain,
 like the wonderful [vim-go][vim-go-github] plugin for *Vim* and *NeoVim*.
+
+### Passing `go vet` check
+
+You have to pass the `go get` default rules, so we all have a consistent
+code-style. This helps to minimize the possiblity of merge conflicts and helps
+to ease in code-reviews.
+
+Here's an excerpt from [the offical documentation of `go vet`][govet]:
+
+> Vet examines Go source code and reports suspicious constructs,
+> such as Printf calls whose arguments do not align with the format string.
+> Vet uses heuristics that do not guarantee all reports are genuine problems,
+> but it can find errors not caught by the compilers.
+
+You should really consider running `go vet` each time you save your files.
+There are excellent plugins that helps to ease the pain,
+like the wonderful [vim-go][vim-go-github] plugin for *Vim* and *NeoVim*,
+which [implements this][vim-go-github-go-vet] in
+[an asynchronous way][async-linting-vim].
 
 ### Passing `golint` check
 
@@ -143,6 +163,7 @@ These dependencies are automatically resolved when you install the
 *Super Evil Golang Linter*.
 
 - [gofmt][gofmt]
+- [govet][govet]
 - [gomega][gomega]
 - [goblin][goblin]
 - [golint][golint]
@@ -150,9 +171,11 @@ These dependencies are automatically resolved when you install the
 
 
 [gofmt]: https://golang.org/cmd/gofmt/
+[govet]: https://golang.org/cmd/vet/
 [gomega]: https://github.com/onsi/gomega
 [goblin]: https://github.com/franela/goblin
 [golint]: https://godoc.org/golang.org/x/lint/golint
 [golang]: https://golang.org/
 [vim-go-github]: https://github.com/fatih/vim-go
-
+[vim-go-github-go-vet]: https://github.com/fatih/vim-go/blob/b237f52ef7229fd3181330c4197aa1b97270b669/doc/vim-go.txt#L53
+[async-linting-vim]: https://github.com/w0rp/ale
