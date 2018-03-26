@@ -48,6 +48,65 @@ You can also specify a directory (passed via arguments) like so:
 go lint ./src/...
 ```
 
+#### A simple `Makefile`
+
+Let's assume your directory is laid out like this:
+
+```
++- src/
++- dist/
++- .editorconfig
++- .gitignore
++- .gitlab-ci.yml
++- Makefile
+```
+
+The `src/` directory holds all your `*.go` code and you want want to execute
+all the checks, before you start the build. But what you want at all costs is,
+that the `make`-command should immediately stop execution if it encounters any
+errors.
+
+The contents of your [*example* `Makefile`](examples/Makefile)
+could look something like this:
+
+```make
+all: lint build
+
+lint:
+        go lint ./src/...
+
+build: build-linux build-windows build-mac
+
+build-linux:
+        exportGOOS="linux";\
+        go build -ldflags="-s -w" -o dist/evil-example src/main.go;
+
+build-windows:
+        export GOOS="windows";\
+        go build -ldflags="-s -w" -o dist/evil-example.exe src/main.go;
+
+build-mac:
+        export GOOS="darwin";\
+        go build -ldflags="-s -w" -o dist/evil-example.app src/main.go;
+
+optimize-linux:
+        upx --brute dist/evil-example
+
+optimize-windows:
+        upx --brute dist/evil-example.exe
+
+optimize-mac:
+        upx --brute dist/evil-example.app
+
+optimize: optimize-linux optimize-windows optimize-mac
+
+```
+
+With this example `Makefile` you could run `make lint` to check if all rules
+are passed. This `Makefile` also prevents building, when a rule does not pass
+with a sufficient result (e.g.
+[code coverage below 90%](#passing-90-code-coverage-check)).
+
 ## Passing checks
 
 To pass the *linting* rules, your code has to pass the following checks:
