@@ -40,6 +40,14 @@ Switch to the root of your project directory and run the following command:
 go lint
 ```
 
+### Advanced usage
+
+You can also specify a directory (passed via arguments) like so:
+
+```bash
+go lint ./src/...
+```
+
 ## Passing checks
 
 To pass the *linting* rules, your code has to pass the following checks:
