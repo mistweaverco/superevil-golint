@@ -1,6 +1,12 @@
 # Super Evil Golang Linter
 A super evil linter for Golang.
 
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Passing checks](#passing-checks)
+- [Dependencies](#dependencies)
+
 ## Requirements
 
 - Linux or MacOS
