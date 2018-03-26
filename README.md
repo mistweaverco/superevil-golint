@@ -34,7 +34,7 @@ Just fork this repository and you're good to go.
 
 ## Usage
 
-Switch to the root of your project directory and run the following command
+Switch to the root of your project directory and run the following command:
 
 ```bash
 go lint
