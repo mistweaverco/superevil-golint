@@ -198,7 +198,7 @@ package superevilpack
 
 import (
     "testing"
-    . "github.com/franela/goblin"
+    . "github.com/stroeerdigitalpublishing/golang-goblin"
 )
 
 func Test(t *testing.T) {
@@ -237,8 +237,8 @@ These dependencies are automatically resolved when you install the
 
 [gofmt]: https://golang.org/cmd/gofmt/
 [govet]: https://golang.org/cmd/vet/
-[gomega]: https://github.com/onsi/gomega
-[goblin]: https://github.com/franela/goblin
+[gomega]: https://github.com/stroeerdigitalpublishing/golang-gomega
+[goblin]: https://github.com/stroeerdigitalpublishing/golang-goblin
 [golint]: https://godoc.org/golang.org/x/lint/golint
 [golint-purpose]: https://github.com/golang/lint/blob/ead987a65e5c7e053cf9633f9eac1f734f6b4fe3/README.md#purpose
 [golang]: https://golang.org/
