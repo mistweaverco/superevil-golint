@@ -111,7 +111,7 @@ optimize: optimize-linux optimize-windows optimize-mac
 With this example `Makefile` you could run `make lint` to check if all rules
 are passed. This `Makefile` also prevents building, when a rule does not pass
 with a sufficient result (e.g.
-[code coverage below 90%](#passing-90-code-coverage-check)).
+[code coverage below 100%](#passing-100-code-coverage-check)).
 
 ## Passing checks
 
@@ -120,7 +120,7 @@ To pass the *linting* rules, your code has to pass the following checks:
 - [gofmt](#passing-gofmt-check)
 - [go vet](#passing-go-vet-check)
 - [golint](#passing-golint-check)
-- [have at least 90% code coverage](#passing-90-code-coverage-check)
+- [have 100% code coverage](#passing-100-code-coverage-check)
 
 ### Passing `gofmt` check
 
@@ -175,10 +175,10 @@ I will come to your desk and start yelling at you. I swear!
 This should also help to minimize the possiblity of merge conflicts and also
 help to ease-in code-reviews.
 
-### Passing *90% Code Coverage* check
+### Passing *100% Code Coverage* check
 
-This one is simple. Just write tests. Write enough tests, so you have at least
-90% covered. If you cheat on the system and write tests, that do nothing just
+This one is simple. Just write tests. Write enough tests, so you have
+100% covered. If you cheat on the system and write tests, that do nothing just
 to pass this test and I happen to be the peer who is reviewing your code,
 I will come to your desk and start yelling at you (again).
 
